@@ -1,0 +1,294 @@
+{
+    "abi": [
+        {
+            "anonymous": false,
+            "inputs": [
+                { "indexed": true, "internalType": "address", "name": "previousOwner", "type": "address" },
+                { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
+            ],
+            "name": "OwnershipTransferred",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                { "indexed": true, "internalType": "address", "name": "oldImplementation", "type": "address" },
+                { "indexed": true, "internalType": "address", "name": "newImplementation", "type": "address" }
+            ],
+            "name": "UpdateLiquidityPoolManager",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                { "indexed": true, "internalType": "address", "name": "oldImplementation", "type": "address" },
+                { "indexed": true, "internalType": "address", "name": "newImplementation", "type": "address" }
+            ],
+            "name": "UpdatePlanetsManager",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                { "indexed": true, "internalType": "address", "name": "oldImplementation", "type": "address" },
+                { "indexed": true, "internalType": "address", "name": "newImplementation", "type": "address" }
+            ],
+            "name": "UpdateUniverse",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                { "indexed": true, "internalType": "address", "name": "_sender", "type": "address" },
+                { "indexed": true, "internalType": "address", "name": "from", "type": "address" },
+                { "indexed": true, "internalType": "address", "name": "to", "type": "address" }
+            ],
+            "name": "WalletObserverEventBuy",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                { "indexed": true, "internalType": "address", "name": "_sender", "type": "address" },
+                { "indexed": true, "internalType": "address", "name": "from", "type": "address" },
+                { "indexed": true, "internalType": "address", "name": "to", "type": "address" }
+            ],
+            "name": "WalletObserverEventSellOrLiquidityAdd",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                { "indexed": true, "internalType": "address", "name": "_sender", "type": "address" },
+                { "indexed": true, "internalType": "address", "name": "from", "type": "address" },
+                { "indexed": true, "internalType": "address", "name": "to", "type": "address" }
+            ],
+            "name": "WalletObserverEventTransfer",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [{ "indexed": true, "internalType": "bool", "name": "_status", "type": "bool" }],
+            "name": "WalletObserverLiquidityWithdrawal",
+            "type": "event"
+        },
+        {
+            "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+            "name": "_boughtTokens",
+            "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        { "inputs": [], "name": "_decode_call_771274418637067024507", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+        {
+            "inputs": [
+                { "internalType": "uint256", "name": "", "type": "uint256" },
+                { "internalType": "address", "name": "", "type": "address" }
+            ],
+            "name": "_inTokens",
+            "outputs": [{ "internalType": "int256", "name": "", "type": "int256" }],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+            "name": "_isDenied",
+            "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+            "name": "_isExcludedFromObserver",
+            "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+            "name": "_lastBuyOf",
+            "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                { "internalType": "uint256", "name": "", "type": "uint256" },
+                { "internalType": "address", "name": "", "type": "address" }
+            ],
+            "name": "_outTokens",
+            "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                { "internalType": "address", "name": "_sender", "type": "address" },
+                { "internalType": "address", "name": "from", "type": "address" },
+                { "internalType": "address", "name": "to", "type": "address" },
+                { "internalType": "uint256", "name": "amount", "type": "uint256" }
+            ],
+            "name": "beforeTokenTransfer",
+            "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [{ "internalType": "address", "name": "newImplementation", "type": "address" }],
+            "name": "changeLiquidityPoolManagerImplementation",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [{ "internalType": "address", "name": "newImplementation", "type": "address" }],
+            "name": "changePlanetsManagerImplementation",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [{ "internalType": "address", "name": "newImplementation", "type": "address" }],
+            "name": "changeUniverseImplementation",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                { "internalType": "address", "name": "account", "type": "address" },
+                { "internalType": "bool", "name": "status", "type": "bool" }
+            ],
+            "name": "denyMalicious",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                { "internalType": "address", "name": "account", "type": "address" },
+                { "internalType": "bool", "name": "status", "type": "bool" }
+            ],
+            "name": "excludeFromObserver",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [{ "internalType": "address", "name": "account", "type": "address" }],
+            "name": "getBoughtTokensOf",
+            "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getLiquidityPoolManagerImplementation",
+            "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        { "inputs": [], "name": "getMaxTokenPerWallet", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" },
+        {
+            "inputs": [{ "internalType": "address", "name": "account", "type": "address" }],
+            "name": "getOverviewOf",
+            "outputs": [
+                { "internalType": "uint256", "name": "", "type": "uint256" },
+                { "internalType": "uint256", "name": "", "type": "uint256" },
+                { "internalType": "uint256", "name": "", "type": "uint256" },
+                { "internalType": "int256", "name": "", "type": "int256" },
+                { "internalType": "int256", "name": "", "type": "int256" },
+                { "internalType": "int256", "name": "", "type": "int256" }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getPlanetsManagerImplementation",
+            "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        { "inputs": [], "name": "getTimeframeCurrent", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" },
+        {
+            "inputs": [],
+            "name": "getTimeframeExpiresAfter",
+            "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getUniverseImplementation",
+            "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        { "inputs": [], "name": "initialize", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+        {
+            "inputs": [{ "internalType": "address", "name": "account", "type": "address" }],
+            "name": "isExcludedFromObserver",
+            "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [{ "internalType": "address", "name": "account", "type": "address" }],
+            "name": "isWalletFull",
+            "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        { "inputs": [], "name": "maxTokenPerWalletPercent", "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }], "stateMutability": "view", "type": "function" },
+        { "inputs": [], "name": "owner", "outputs": [{ "internalType": "address", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" },
+        { "inputs": [], "name": "recoverLostAVAX", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+        {
+            "inputs": [
+                { "internalType": "address", "name": "_token", "type": "address" },
+                { "internalType": "address", "name": "_to", "type": "address" },
+                { "internalType": "uint256", "name": "_amount", "type": "uint256" }
+            ],
+            "name": "recoverLostTokens",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        { "inputs": [], "name": "renounceOwnership", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+        {
+            "inputs": [{ "internalType": "uint8", "name": "_maxTokenPerWalletPercent", "type": "uint8" }],
+            "name": "setMaxTokenPerWalletPercent",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [{ "internalType": "uint256", "name": "_timeframeExpiresAfter", "type": "uint256" }],
+            "name": "setTimeframeExpiresAfter",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [{ "internalType": "uint256", "name": "_timeframeQuotaIn", "type": "uint256" }],
+            "name": "setTimeframeQuotaIn",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [{ "internalType": "uint256", "name": "_timeframeQuotaOut", "type": "uint256" }],
+            "name": "setTimeframeQuotaOut",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [{ "internalType": "address", "name": "newOwner", "type": "address" }],
+            "name": "transferOwnership",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ]
+}

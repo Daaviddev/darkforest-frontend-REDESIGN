@@ -1,0 +1,47 @@
+.planet-button {
+    display: flex;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #fdb931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+        border-radius: 10px;
+    padding: 9px 20px;
+    cursor: pointer;
+    margin: 20px 20px 0px 0px;
+    &:hover {
+        box-shadow: 2px 2px 8px #aaa;
+        @keyframes shine {
+            to {
+                opacity: 1;
+                right: 150%;
+            }
+        }
+    }
+
+    .planet-button-progress {
+        margin-left: 10px;
+        margin-top: 4px;
+    }
+
+    p {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 18px;
+        font-family: verdana, sans;
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.7);
+        @media (max-width: 600px) {
+            font-size: 15px;
+          }
+    }
+
+    .disabled {
+        pointer-events: none;
+        background: rgba(110, 80, 20, 0.4);
+        // width: 100%;
+    }
+
+    .card-disabled {
+        margin-left: 20px !important;
+        width: 60%;
+        justify-content: center;
+    }
+}

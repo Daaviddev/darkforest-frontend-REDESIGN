@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+
+
+.container {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 1200px;
+
+    .df-card {
+        position: relative;
+        box-shadow: 10px 10px 48px rgba(0, 0, 0, 0.5);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0);
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(247, 189, 33, 0.2);
+        backdrop-filter: blur(4px);
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        min-width: 400px;
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-bottom: 6%;
+
+        @media (max-width: 400px){
+            margin-top: 30%;
+            margin-left:0;
+            min-width: 300px;
+        }
+
+        @media (min-width: 400px){
+            margin-top: 30%;
+            margin-left:0;
+            min-width: 350px;
+        }
+        @media (min-width: 500px){
+            margin-top: 20%;
+            margin-left: 5%;
+        }
+
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+            backdrop-filter: blur(100px);
+        }
+
+        /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+        @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+        }
+
+        .content {
+            padding: 16px;
+            transition: 0.5s;
+        }
+    }
+
+    .df-card:hover {
+        transform: scale(1.01);
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-bottom: 2px solid rgb(255, 214, 153);
+        border-right: 2px solid rgb(255, 214, 153);
+        border-top: 2px solid rgb(255, 214, 153);
+        border-left: 2px solid rgb(255, 214, 153);
+        box-shadow: 2px 2px 8px #aaa;
+    }
+
+    .card-title {
+        justify-content: center;
+        text-align: center;
+        font-family: Montserrat Medium;
+        font-weight: 500;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.6);
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .card-tier {
+        justify-content: center;
+        text-align: center;
+        font-family: Montserrat Medium;
+        font-weight: 500;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .card-name {
+        justify-content: center;
+        font-family: Libre Baskerville;
+        font-weight: 700;
+        font-size: 35px;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 1);
+        text-align: center;
+        margin-top: 10%;
+        @media (max-width: 500px){
+            font-size: 25px;
+        }
+    }
+
+    .dapp-topbar-btns-wrap {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .dapp-topbar-btns-wrap-full {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card-value {
+        font-family: Montserrat Bold;
+        //   font-weight: bold;
+        font-size: 20px;
+        color: #ffffff;
+        padding-bottom: 20px !important;
+    }
+}
